@@ -28,7 +28,7 @@ class UserProfileManager(BaseUserManager):
         user = self.create_user(email, name, password)
 
         user.is_superuser = True
-        user.is_staff =AbstractBaseUseruser
+        user.is_staff =True
         user.save(using=self._db) ## specify the database to save to
 
         return user
